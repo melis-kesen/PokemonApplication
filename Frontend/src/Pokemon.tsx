@@ -60,6 +60,7 @@ const App: React.FC = () => {
   };
 
   const saveCard = (card: Pokemon) => {
+    setSelectedCard(null);
     localStorage.setItem(`${card.id}`, JSON.stringify(card));
     toast.current?.show({
       severity: "success",
@@ -70,6 +71,7 @@ const App: React.FC = () => {
     console.log("Saving or removing card:", card);
   };
   const removeCard = (card: Pokemon) => {
+    setSelectedCard(null);
     localStorage.removeItem(`${card.id}`);
     toast.current?.show({
       severity: "success",
