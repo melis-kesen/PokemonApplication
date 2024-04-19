@@ -65,7 +65,7 @@ const App: React.FC = () => {
     toast.current?.show({
       severity: "success",
       summary: "Succes",
-      detail: `Pokemon: ${card.name} is added to local storage!`,
+      detail: `${card.name} is added to local storage!`,
       life: 3150,
     });
     console.log("Saving or removing card:", card);
@@ -76,7 +76,7 @@ const App: React.FC = () => {
     toast.current?.show({
       severity: "success",
       summary: "Succes",
-      detail: `Pokemon: ${card.name} is removed from local storage!`,
+      detail: `${card.name} is removed from local storage!`,
       life: 3150,
     });
     console.log("Saving or removing card:", card);
