@@ -2,12 +2,16 @@ import React from 'react';
 import { Card } from 'primereact/card';
 
 interface Pokemon {
-    id: string;
-    name: string;
-    imageUrl: string;
-    subtype: string;
-    hp: number;
-    abilities: string[];
+  id: string;
+  name: string;
+  imageUrl: string;
+  subtype: string;
+  hp: number;
+  evolesFrom: string;
+  rarity: string;
+  series: string;
+  types: string[];
+  weaknesses: string[];
   }
 
 interface Props {

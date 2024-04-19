@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Toast } from "primereact/toast";
-import { Dialog } from "primereact/dialog";
 import { PokemonAPI } from "./service/pokemonAPI.service";
 import CardList from "./components/CardList";
 import CardDetails from "./components/CardDetails";
@@ -11,7 +10,11 @@ interface Pokemon {
   imageUrl: string;
   subtype: string;
   hp: number;
-  abilities: string[];
+  evolesFrom: string;
+  rarity: string;
+  series: string;
+  types: string[];
+  weaknesses: string[];
 }
 
 const App: React.FC = () => {
