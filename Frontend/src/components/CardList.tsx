@@ -17,11 +17,11 @@ interface Props {
 
 const CardList: React.FC<Props> = ({ pokemonCards, onCardSelect }) => {
     return (
-        <div className="card-list">
-          <div className="p-grid">
+        <div className="grid justify-content-center">
+          <div className="grid justify-content-center gap-3 col-12">
             {pokemonCards.map((card) => (
               <div key={card.id} className="p-col-12 p-md-4 p-lg-3 p-xl-2">
-                <Card title={card.name} onClick={() => onCardSelect(card.id)}>
+                <Card className="border-round-2xl"  title={card.name} onClick={() => onCardSelect(card.id)}>
                   <img src={card.imageUrl} alt={card.name} />
                 </Card>
               </div>
