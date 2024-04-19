@@ -59,8 +59,24 @@ const App: React.FC = () => {
     }
   };
 
-  const saveOrRemoveCard = (card: Pokemon) => {
-    //TODO: Implement
+  const saveCard = (card: Pokemon) => {
+    localStorage.setItem(`${card.id}`, JSON.stringify(card));
+    toast.current?.show({
+      severity: "success",
+      summary: "Succes",
+      detail: `Pokemon: ${card.name} is added to local storage!`,
+      life: 3150,
+    });
+    console.log("Saving or removing card:", card);
+  };
+  const removeCard = (card: Pokemon) => {
+    localStorage.removeItem(`${card.id}`);
+    toast.current?.show({
+      severity: "success",
+      summary: "Succes",
+      detail: `Pokemon: ${card.name} is removed from local storage!`,
+      life: 3150,
+    });
     console.log("Saving or removing card:", card);
   };
   const hideCardDetails = () => {
@@ -73,7 +89,8 @@ const App: React.FC = () => {
       <CardList pokemonCards={pokemonCards} onCardSelect={handleCardSelect} />
       <CardDetails
         selectedCard={selectedCard}
-        onSaveOrRemoveCard={saveOrRemoveCard}
+        onSaveCard={saveCard}
+        onRemoveCard={removeCard}
         onHide={hideCardDetails}
       />
        <SplashScreen visible={loading} />

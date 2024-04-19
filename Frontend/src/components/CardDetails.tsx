@@ -17,13 +17,15 @@ interface Pokemon {
 
 interface Props {
   selectedCard: Pokemon | null;
-  onSaveOrRemoveCard: (card: Pokemon) => void;
+  onSaveCard: (card: Pokemon) => void;
+  onRemoveCard: (card: Pokemon) => void;
   onHide: () => void;
 }
 
 const CardDetails: React.FC<Props> = ({
   selectedCard,
-  onSaveOrRemoveCard,
+  onSaveCard,
+  onRemoveCard,
   onHide,
 }) => {
   return (
@@ -64,14 +66,14 @@ const CardDetails: React.FC<Props> = ({
               text
               outlined
               label="Save Card"
-              onClick={() => onSaveOrRemoveCard(selectedCard)}
+              onClick={() => onSaveCard(selectedCard)}
               className="col-6 p-button-success"
             />
             <Button
               text
               outlined
               label="Remove Card"
-              onClick={() => onSaveOrRemoveCard(selectedCard)}
+              onClick={() => onRemoveCard(selectedCard)}
               className="col-6 p-button-error"
             />
           </div>
