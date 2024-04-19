@@ -15,7 +15,7 @@ Pokémon TCG API at https://docs.pokemontcg.io/
    - Show an appropriate indicator to reflect the card's saved status.
 
 ## Application
-![](./gif1.gif)
+![](./poke.gif)
 
 ## Installation
 
