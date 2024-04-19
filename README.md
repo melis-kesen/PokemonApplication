@@ -28,39 +28,17 @@ npm install
 
 ## Usage
 
-```text
+
 ## Running the Application
 
 To run the application, execute the following command in Frontend path:
-
+```bash
 npm start
-
--When the project is opened, 10 Pokémon cards are visible on the screen, and more can be seen as you scroll. 
--When any card is clicked, a sidebar containing the relevant Pokémon information opens. 
--Here, a button appears as add or remove. 
--If the corresponding Pokémon is added to the local storage, the remove button will be active.
-
-### Possible Errors ###
-
 ```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-
-## Stay in touch
-
-- Author - [Melis Keşen](https://www.linkedin.com/in/meliskesen/)
-- Website - [https://melis-kesen.github.io/Portfolio/](https://melis-kesen.github.io/Portfolio/)
-
-## License
-
-
-```
+- When the project is opened, 10 Pokémon cards are visible on the screen, and more can be seen as you scroll. 
+- When any card is clicked, a sidebar containing the relevant Pokémon information opens. 
+- Here, a button appears as add or remove. 
+- If the corresponding Pokémon is added to the local storage, the remove button will be active.
 
 ## Contributing
 
