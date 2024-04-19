@@ -3,7 +3,7 @@ import { Toast } from "primereact/toast";
 import { PokemonAPI } from "./service/pokemonAPI.service";
 import CardList from "./components/CardList";
 import CardDetails from "./components/CardDetails";
-import SplashScreen from './components/SplashScreen';
+import SplashScreen from "./components/SplashScreen";
 interface Pokemon {
   id: string;
   name: string;
@@ -30,7 +30,7 @@ const App: React.FC = () => {
   const fetchPokemonCards = async () => {
     try {
       const response = await PokemonAPI.getAllPokemonCards();
-      setLoading(false)
+      setLoading(false);
       setPokemonCards(response.cards);
     } catch (error: any) {
       console.error("Error fetching Pokemon cards:", error);
@@ -46,7 +46,7 @@ const App: React.FC = () => {
   const handleCardSelect = async (cardId: string) => {
     try {
       const response = await PokemonAPI.getPokemonCardDetails(cardId);
-      setLoading(false)
+      setLoading(false);
       setSelectedCard(response.card);
     } catch (error: any) {
       console.error("Error fetching Pokemon card details:", error);
@@ -93,7 +93,7 @@ const App: React.FC = () => {
         onRemoveCard={removeCard}
         onHide={hideCardDetails}
       />
-       <SplashScreen visible={loading} />
+      <SplashScreen visible={loading} />
     </div>
   );
 };

@@ -63,6 +63,9 @@ const CardDetails: React.FC<Props> = ({
           <br></br>
           <div className="grid col-12">
             <Button
+              visible={
+                localStorage.getItem(`${selectedCard.id}`) ? false : true
+              }
               text
               outlined
               label="Save Card"
@@ -70,6 +73,9 @@ const CardDetails: React.FC<Props> = ({
               className="col-6 p-button-success"
             />
             <Button
+              visible={
+                localStorage.getItem(`${selectedCard.id}`) ? true : false
+              }
               text
               outlined
               label="Remove Card"
